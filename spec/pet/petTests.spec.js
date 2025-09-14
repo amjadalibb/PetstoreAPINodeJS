@@ -1,7 +1,7 @@
 const { requestAPI, requestAPIWithFormData } = require('../../support/api.js');
 const { expect } = require('chai');
 const { expectSnapshot, httpStatus, report } = require('../../support/index.js');
-const { ADDPET, UPDATEPET, UPLOADIMAGEPET, FINDBYSTATUS, FINDBYID, UPDATEWITHFORM, DELETEPET } = require('../../tests/pet/petTests.js')
+const { ADDPET, UPDATEPET, UPLOADIMAGEPET, FINDBYSTATUS, FINDBYID, UPDATEWITHFORM, DELETEPET } = require('../../testdata/pet/petTests.js')
 
 describe('PetStore - API Tests for Pets', function() {
     describe('Add Pets', function() {
