@@ -20,20 +20,17 @@ jobs:
 
     - name: Build Docker image
       run: docker build -t petstore-api-test-image .
-    
 
     - name: Run API tests in Docker
-      run: docker run --rm petstore-api-test-image npm run test
-
-    - name: Create artifact directory
-      run: mkdir -p ./artifacts
-    
-    - name: Copy build output to artifacts
+      id: execute
       run: |
-        cp -r ./mochawesome-report/* ./artifacts/
-
-    - name: Upload artifacts
+        docker run --rm petstore-api-test-image npm run test
+        echo "test-results-path=$GITHUB_WORKSPACE/mochawesome-report" >> $GITHUB_OUTPUT
+    - name: Archive mochawesome test results
       uses: actions/upload-artifact@v4
       with:
-        name: petstore-test-artifacts
-        path: ./artifacts/
+        name: mochawesome-report
+        include-hidden-files: true
+        path: |
+          ${{steps.execute.outputs.test-results-path}}/*
+          !**/*.zip
