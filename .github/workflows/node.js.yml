@@ -2,7 +2,8 @@ name: Petstore API tests
 
 on:
   push:
-    branches: [ "main" ]
+    branches: 
+      - main
 
 jobs:
   build-and-test:
@@ -13,6 +14,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      
     - name: Setup Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
@@ -25,7 +27,18 @@ jobs:
       with:
         username: ${{ vars.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-    - name: Push image to Docker Hub
-      run: docker push ${{ vars.DOCKER_USERNAME }}/petstoreapinodejs:latest
-    - name: Run tests
-      run: npm test
+    - name: Build and push
+      uses: docker/build-push-action@v2
+      with:
+        context: ./
+        file: ./Dockerfile
+        push: true
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/petstoreapinodejs:latest
+
+        
+    - name: Run the image in a container
+      uses: addnab/docker-run-action@v3
+      with:
+        image: ${{ secrets.DOCKERHUB_USERNAME }}/petstoreapinodejs:latest
+        run: |
+          echo "running the docker image"
