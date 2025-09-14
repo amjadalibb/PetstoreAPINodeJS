@@ -4,6 +4,8 @@ FROM node:${NODE_VERSION}-alpine
 
 WORKDIR /app
 
+RUN mkdir -p /app/mochawesome-report
+
 COPY package*.json ./
 RUN npm install
 COPY . .
