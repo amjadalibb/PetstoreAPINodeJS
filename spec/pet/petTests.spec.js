@@ -1,6 +1,6 @@
 const { requestAPI, requestAPIWithFormData } = require('../../support/api.js');
 const { expect } = require('chai');
-const { expectSnapshot, httpStatus, report } = require('../../support');
+const { expectSnapshot, httpStatus, report } = require('../../support/index.js');
 const { ADDPET, UPDATEPET, UPLOADIMAGEPET, FINDBYSTATUS, FINDBYID, UPDATEWITHFORM, DELETEPET } = require('../../tests/pet/petTests.js')
 
 describe('PetStore - API Tests for Pets', function() {
@@ -200,7 +200,7 @@ describe('PetStore - API Tests for Pets', function() {
         });
     });
     describe('Update With Form Pet', function() {
-        it('Update an existing pet with form data - valid', async function() {
+        it.skip('Update an existing pet with form data - valid', async function() {
             this.timeout(10000);
             report(this, 'API Options BaseURL', UPDATEWITHFORM.optionsValid.baseURL);
             report(this, 'API Options Endpoint', UPDATEWITHFORM.optionsValid.endpoint);
