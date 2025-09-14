@@ -29,5 +29,5 @@ jobs:
       with:
         name: mocha-test-report
         path: |
-          ./mochawesome-report/*
+          ./app/mochawesome-report/*
           !**/*.zip
