@@ -12,7 +12,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./specs/pet/petTests.spec.js -- --reporter mochawesome --reporter-options reportDir=./mochawesome-report,reportFilename=petstore-api-report,reportTitle=\"PetStore API Test Report\",reportPageTitle=\"PetStore API Tests\",autoOpen=true,code=false"
+    "test": "mocha ./spec/**/*.spec.js -- --reporter mochawesome --reporter-options reportDir=./mochawesome-report,reportFilename=petstore-api-report,reportTitle=\"PetStore API Test Report\",reportPageTitle=\"PetStore API Tests\",autoOpen=true,code=false"
   },
   "devDependencies": {
     "@faker-js/faker": "^10.0.0",
