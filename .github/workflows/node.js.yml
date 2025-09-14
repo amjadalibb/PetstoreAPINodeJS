@@ -26,7 +26,7 @@ jobs:
     - name: Build and test
       uses: docker/build-push-action@v6
       with:
-        target: test
+        target: production
         load: true
     - name: Build and push
       uses: docker/build-push-action@v6
