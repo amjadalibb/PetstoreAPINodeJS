@@ -27,6 +27,7 @@ I prioritized work as under:
 * Improve documentation for `README.MD` `TESTPLAN.MD` `BUGREPORT.MD` `DECISION.MD`
 
 Below are for future work tasks:
+* Some tests were skipped because they were failing due to invalid status codes - requires follow up
 * Add tests for remaining apis `/store` and `/user`
 * Add tests for other status codes
 * Add scenario based tests for end to end journey
