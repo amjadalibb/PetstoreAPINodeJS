@@ -1,4 +1,3 @@
-# Use an official Node.js runtime as a parent image
 ARG NODE_VERSION=24.5.0
 
 FROM node:${NODE_VERSION}-alpine
