@@ -30,7 +30,7 @@ jobs:
     
     - name: Copy build output to artifacts
       run: |
-        cp -r ./* ./artifacts/
+        cp -r ./mochawesome-report/* ./artifacts/
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
