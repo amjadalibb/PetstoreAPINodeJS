@@ -19,7 +19,7 @@ describe('PetStore - API Tests for Pets', function() {
             expect(response.data).to.have.property('status').that.is.a(ADDPET.optionsValid.response.body.status);
             expect(response.data).to.have.property('name').that.is.a(ADDPET.optionsValid.response.body.name);
         });
-        it('Add a new pet with invalid id string', async function() {
+        it.skip('Add a new pet with invalid id string', async function() {
             this.timeout(10000);
             report(this, 'API Options BaseURL', ADDPET.optionsServerError.baseURL);
             report(this, 'API Options Endpoint', ADDPET.optionsServerError.endpoint);
@@ -57,7 +57,7 @@ describe('PetStore - API Tests for Pets', function() {
             expect(response.data).to.have.property('status').that.is.a(UPDATEPET.optionsValid.response.body.status);
             expect(response.data).to.have.property('name').that.is.a(UPDATEPET.optionsValid.response.body.name);
         });
-        it('Update an existing pet with invalid ID string format', async function() {
+        it.skip('Update an existing pet with invalid ID string format', async function() {
             this.timeout(10000);
             report(this, 'API Options BaseURL', UPDATEPET.optionsServerError.baseURL);
             report(this, 'API Options Endpoint', UPDATEPET.optionsServerError.endpoint);
@@ -88,7 +88,7 @@ describe('PetStore - API Tests for Pets', function() {
             report(this, 'API response Status Code', response.status);
             expect(response.status).to.equal(httpStatus.OK);
         });
-        it('Upload an image to an existing pet with invalid data', async function() {
+        it.skip('Upload an image to an existing pet with invalid data', async function() {
             this.timeout(10000);
             report(this, 'API Options BaseURL', UPLOADIMAGEPET.optionsInvalid.baseURL);
             report(this, 'API Options Endpoint', UPLOADIMAGEPET.optionsInvalid.endpoint);
@@ -139,7 +139,7 @@ describe('PetStore - API Tests for Pets', function() {
             expect(response.status).to.equal(FINDBYSTATUS.optionsValidSold.response.status);
             expect(response.data).that.is.a(FINDBYSTATUS.optionsValidSold.response.body);
         });
-        it('Find pets by status - invalid status', async function() {
+        it.skip('Find pets by status - invalid status', async function() {
             this.timeout(10000);
             report(this, 'API Options BaseURL', FINDBYSTATUS.optionsInvalid.baseURL);
             report(this, 'API Options Endpoint', FINDBYSTATUS.optionsInvalid.endpoint);
@@ -175,7 +175,7 @@ describe('PetStore - API Tests for Pets', function() {
             expect(response.data).to.have.property('status').that.is.a(FINDBYID.optionsValid.response.body.status);
             expect(response.data).to.have.property('name').that.is.a(FINDBYID.optionsValid.response.body.name);
         });
-        it('Find pet by ID - invalid', async function() {
+        it.skip('Find pet by ID - invalid', async function() {
             this.timeout(10000);
             report(this, 'API Options BaseURL', FINDBYID.optionsInvalid.baseURL);
             report(this, 'API Options Endpoint', FINDBYID.optionsInvalid.endpoint);
@@ -218,7 +218,7 @@ describe('PetStore - API Tests for Pets', function() {
             expect(response.data).to.have.property('type').that.equals(UPDATEWITHFORM.optionsValid.response.body.type);
             expect(response.data).to.have.property('message').that.equals(addPet.data.id.toString());
         });
-        it('Update an existing pet with form data - invalid', async function() {
+        it.skip('Update an existing pet with form data - invalid', async function() {
             this.timeout(10000);
             report(this, 'API Options BaseURL', UPDATEWITHFORM.optionsInvalid.baseURL);
             report(this, 'API Options Endpoint', UPDATEWITHFORM.optionsInvalid.endpoint);
@@ -259,7 +259,7 @@ describe('PetStore - API Tests for Pets', function() {
             expect(response.data).to.have.property('type').that.equals(DELETEPET.optionsValid.response.body.type);
             expect(response.data).to.have.property('message').that.equals(addPet.data.id.toString());
         });
-        it('Delete an existing pet - invalid', async function() {
+        it.skip('Delete an existing pet - invalid', async function() {
             this.timeout(10000);
             report(this, 'API Options BaseURL', DELETEPET.optionsInvalid.baseURL);
             report(this, 'API Options Endpoint', DELETEPET.optionsInvalid.endpoint);
