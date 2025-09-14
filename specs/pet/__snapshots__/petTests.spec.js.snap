@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PetStore - API Tests for Pets Add Pets Add a new pet with method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests for Pets Delete Pet Delete an existing pet - method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests for Pets Find By ID Pet Find pet by ID - method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests for Pets Find By Status Pet Find pets by status - method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests for Pets Update Pets Update an existing pet with method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests for Pets Update With Form Pet Update an existing pet with form data - method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests for Pets Upload Image to Pet Upload an image to an existing pet with method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests to Pets Add Pets Add a new pet with method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests to Pets Delete Pet Delete an existing pet - invalid 1`] = `
+Object {
+  "code": 404,
+  "message": "java.lang.NumberFormatException: For input string: \\"invalidId\\"",
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests to Pets Delete Pet Delete an existing pet - method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests to Pets Find By ID Pet Find pet by ID - invalid 1`] = `
+Object {
+  "code": 404,
+  "message": "java.lang.NumberFormatException: For input string: \\"invalidId\\"",
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests to Pets Find By ID Pet Find pet by ID - method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests to Pets Update Pets Update an existing pet with method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests to Pets Update With Form Pet Update an existing pet with form data - method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests to Pets Upload Image to Pet Upload an image to an existing pet with invalid data 1`] = `
+Object {
+  "code": 404,
+  "message": "java.lang.NumberFormatException: For input string: \\"invalidId\\"",
+  "type": "unknown",
+}
+`;
+
+exports[`PetStore - API Tests to Pets Upload Image to Pet Upload an image to an existing pet with method not found 1`] = `
+Object {
+  "code": 405,
+  "type": "unknown",
+}
+`;
