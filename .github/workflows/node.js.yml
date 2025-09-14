@@ -24,13 +24,14 @@ jobs:
     - name: Run API tests in Docker
       id: execute
       run: |
-        docker run --rm petstore-api-test-image npm run test
-        echo "test-results-path=$GITHUB_WORKSPACE/mochawesome-report" >> $GITHUB_OUTPUT
+        docker run --rm -v ${{ github.workspace }}/mochawesome-report:/app/mochawesome-report petstore-api-test-image npm run test
+        echo "test-results-path=${{ github.workspace }}/mochawesome-report" >> $GITHUB_OUTPUT
+
     - name: Archive mochawesome test results
       uses: actions/upload-artifact@v4
       with:
         name: mochawesome-report
         include-hidden-files: true
         path: |
-          /app/mochawesome-report/*
+          ${{steps.execute.outputs.test-results-path}}/*
           !**/*.zip
