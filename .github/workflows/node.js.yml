@@ -32,5 +32,5 @@ jobs:
         name: mochawesome-report
         include-hidden-files: true
         path: |
-          ${{steps.execute.outputs.test-results-path}}/*
+          /app/mochawesome-report/*
           !**/*.zip
