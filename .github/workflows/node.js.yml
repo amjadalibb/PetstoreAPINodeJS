@@ -33,12 +33,12 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/petstoreapinodejs:latest
+        tags: ${{ vars.DOCKER_USERNAME }}/petstoreapinodejs:latest
 
         
     - name: Run the image in a container
       uses: addnab/docker-run-action@v3
       with:
-        image: ${{ secrets.DOCKER_USERNAME }}/petstoreapinodejs:latest
+        image: ${{ vars.DOCKER_USERNAME }}/petstoreapinodejs:latest
         run: |
           echo "running the docker image"
